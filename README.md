@@ -7,7 +7,9 @@ This repo contains a new ImageFactory class for [skyview-in-a-Jar](https://skyvi
 ### Modifying skyview-in-a-Jar
 
 ```bash
-jar uf path_to_skyview/skyview.jar -C skyview/skyview/survey/    LocalImageFactory.class
+mkdir -p skyview/skyview/survey/                    # make directory for skyview_jar
+cp LocalImageFactory.class skyview/skyview/survey/  # copy file
+jar uf path_to_skyview/skyview.jar -C skyview/   skyview/survey/LocalImageFactory.class
 ```
 
 ### Running the Python script
